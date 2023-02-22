@@ -14,7 +14,7 @@ const { handleError, convertToApiError } = require('./middleware/apiError');
 
 // mongodb+srv://admin:<password>@cluster0.kbuow.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
-const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}?retryWrites=true&w=majority`;
+const mongoUri = process.env.DB_USER;
 mongoose.connect(mongoUri,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
