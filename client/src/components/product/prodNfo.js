@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { WavesButton } from 'utils/tools';
 import AddToCartHandler from 'utils/addToCartHandler';
 
-import LocalShippingIcon from '@material-ui/icons/LocalShipping';
-import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
-import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+// import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+// import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
+// import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import Icon from '@mui/material/Icon';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { userAddToCart } from 'store/actions/user.actions';
@@ -35,7 +36,8 @@ const ProdNfo = (props) => {
     const showProdTags = (detail) => (
         <div className="product_tags">
             <div className="tag">
-                <div><LocalShippingIcon/></div>
+                <div><Icon>local_shipping_icon</Icon></div>
+                 
                 <div className="tag_text">
                     { detail.shipping ?
                         <div>Free shipping for US location</div>
@@ -46,14 +48,14 @@ const ProdNfo = (props) => {
             </div>
             { detail.available > 0 ?
                 <div className="tag">
-                    <div><DoneOutlineIcon/></div>
+                    <div> <Icon>done_outline_icon</Icon></div>
                     <div className="tag_text">
                         <div><strong>{detail.available}</strong> product/s in wharehouse available.</div>
                     </div>
                 </div>
                 :
                 <div className="tag">
-                    <div><SentimentVeryDissatisfiedIcon/></div>
+                    <div> <Icon>sentiment_very_dissatisfied_icon</Icon></div>
                     <div className="tag_text">
                         <div>Sorry, product not Available at the moment</div>
                     </div>

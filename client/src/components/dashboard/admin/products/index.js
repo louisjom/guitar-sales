@@ -4,7 +4,8 @@ import ProductsTable from './productsTable';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { errorHelper } from 'utils/tools';
-import { TextField } from '@material-ui/core';
+// import { TextField } from '@material-ui/core';
+import TextField from '@mui/material/TextField';
 import { Button } from 'react-bootstrap';
 
 import { useDispatch, useSelector } from 'react-redux'

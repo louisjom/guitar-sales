@@ -10,8 +10,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { productsByPaginate } from 'store/actions/product.actions';
 import { getAllBrands } from 'store/actions/brands.actions';
 
-import GridOffIcon from '@material-ui/icons/GridOff';
-import GridOnIcon from '@material-ui/icons/GridOn';
+import Icon from '@mui/material/Icon';
+
+// import GridOffIcon from '@material-ui/icons/GridOff';
+// import GridOnIcon from '@material-ui/icons/GridOn';
 
 const defaultValues = { keywords:'',brand:[], min:0,max:100000,frets:[], page:1 }
 
@@ -103,12 +105,12 @@ const Shop = () => {
                                 <div className={`grid_btn ${grid ? '': 'active'}`}
                                     onClick={()=> handleGrid()}
                                 >
-                                    <GridOnIcon/>
+                                    <Icon>grid_on_icon</Icon> 
                                 </div>
                                 <div className={`grid_btn ${!grid ? '': 'active'}`}
                                     onClick={()=> handleGrid()}
                                 >
-                                    <GridOffIcon/>
+                                    <Icon>grid_off_icon</Icon> 
                                 </div>
                             </div>
                             <div>

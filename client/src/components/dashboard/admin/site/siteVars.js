@@ -6,10 +6,12 @@ import { errorHelper } from 'utils/tools';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateSiteVars } from 'store/actions/site.action';
 
-import {
-    TextField,
-    Button
-} from '@material-ui/core'
+// import {
+//     TextField,
+//     Button
+// } from '@material-ui/core'
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 const SiteVars = () => {
     const site = useSelector(state=> state.site);

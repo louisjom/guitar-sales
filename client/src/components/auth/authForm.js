@@ -5,10 +5,14 @@ import Loader from 'utils/loader';
 import { errorHelper } from 'utils/tools'
 
 import { useDispatch, useSelector } from 'react-redux';
-import { TextField , Button } from '@material-ui/core';
+// import { TextField , Button } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import { userRegister, userSignIn } from 'store/actions/user.actions';
+import { useNavigate  } from "react-router-dom";
 
 const AuthForm = (props) => {
+    let navigate = useNavigate();
     const notifications = useSelector(state=> state.notifications);
     const [loading,setLoading] = useState(false);
     const dispatch = useDispatch();
@@ -43,11 +47,12 @@ const AuthForm = (props) => {
 
     useEffect(()=>{
         if(notifications && notifications.success){
-            props.history.push('/dashboard')
+            // props.history.push('/dashboard')
+            navigate("/dashboard")
         } else{
             setLoading(false);
         }
-    },[notifications,props.history])
+    },[notifications, navigate])
 
 
     return(

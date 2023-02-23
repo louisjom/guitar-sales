@@ -14,16 +14,22 @@ import { getAllBrands } from 'store/actions/brands.actions';
 import { productEdit, productsById } from 'store/actions/product.actions';
 import { clearCurrentProduct } from 'store/actions/index'
 
-import { 
-    TextField,
-    Button,
-    Divider,
-    Select,
-    MenuItem,
-    FormControl,
-    FormHelperText
-} from '@material-ui/core';
-
+// import { 
+//     TextField,
+//     Button,
+//     Divider,
+//     Select,
+//     MenuItem,
+//     FormControl,
+//     FormHelperText
+// } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Divider from '@mui/material/Divider';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
 
 const AddProduct = (props) => {
     const [values,setValues] = useState(formValues);

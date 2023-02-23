@@ -3,8 +3,9 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { errorHelper } from 'utils/tools';
 
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+// import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+// import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import Icon from '@mui/material/Icon';
 import {
     List,
     ListItem,
@@ -12,7 +13,7 @@ import {
     Collapse,
     TextField,
     Button
-} from '@material-ui/core';
+} from '@mui/material';
 
 
 const RangeSelect = (props) => {
@@ -41,7 +42,8 @@ const RangeSelect = (props) => {
                         primary={props.title}
                         className="collapse_title"
                     />
-                    { open ? <ArrowDropUpIcon/> :<ArrowDropDownIcon/> } 
+                    {/* { open ? <ArrowDropUpIcon/> :<ArrowDropDownIcon/> }  */}
+                    { open ? <Icon>arrow_drop_up_icon</Icon> :<Icon>arrow_drop_down_icon</Icon>} 
                 </ListItem>
                 <Collapse in={open} timeout="auto">
                     <List component="div" disablePadding>

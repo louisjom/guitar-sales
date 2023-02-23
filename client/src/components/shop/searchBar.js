@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { errorHelper } from 'utils/tools';
 import {
     TextField
-} from '@material-ui/core';
+} from '@mui/material';
 
 
 const SearchBar = (props) => {

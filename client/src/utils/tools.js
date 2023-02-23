@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import cookie from 'react-cookies';
 
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
+// import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
+import Icon from '@mui/material/Icon';
 
 
 export const WavesButton = (props) => {
@@ -32,7 +33,8 @@ export const WavesButton = (props) => {
                     }}
                     style={{ ...props.style }}
                 >
-                    <AddShoppingCartIcon  style={{ fontSize: props.iconSize }}/>
+                    <Icon style={{ fontSize: props.iconSize }}>add_shopping_cart_icon</Icon> 
+                    
                 </div>
         break;
         case "add_to_cart_link":
@@ -42,7 +44,8 @@ export const WavesButton = (props) => {
                             props.runAction()
                         }}
                     >
-                        <AddShoppingCartIcon/>
+                        <Icon >add_shopping_cart_icon</Icon> 
+                        
                         Add to cart
                     </div>
         break;

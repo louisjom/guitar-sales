@@ -9,13 +9,18 @@ import Loader from 'utils/loader';
 
 import Modal from 'react-bootstrap/Modal';
 
-import {
-    TextField,
-    Button,
-    Stepper,
-    Step,
-    StepLabel
-} from '@material-ui/core';
+// import {
+//     TextField,
+//     Button,
+//     Stepper,
+//     Step,
+//     StepLabel
+// } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
 
 
 const EmailStepper = ({users}) => {

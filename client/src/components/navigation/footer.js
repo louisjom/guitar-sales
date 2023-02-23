@@ -1,9 +1,10 @@
 import React from 'react';
 
-import ContactsIcon from '@material-ui/icons/Contacts';
-import TimelapseIcon from '@material-ui/icons/Timelapse';
-import PhoneIcon from '@material-ui/icons/Phone';
-import EmailIcon from '@material-ui/icons/Email';
+// import ContactsIcon from '@material-ui/icons/Contacts';
+// import TimelapseIcon from '@material-ui/icons/Timelapse';
+// import PhoneIcon from '@material-ui/icons/Phone';
+// import EmailIcon from '@material-ui/icons/Email';
+import Icon from '@mui/material/Icon';
 import { useSelector } from 'react-redux';
 
 const Footer = () => {
@@ -21,28 +22,29 @@ const Footer = () => {
                         <h2>Contact information</h2>
                         <div className="business_nfo">
                             <div className="tag">
-                                <ContactsIcon/>
+                                {/* <ContactsIcon/> */}
+
                                 <div className="nfo">
                                     <div>Address</div>
                                     <div>{site.vars.address}</div>
                                 </div>
                             </div>
                             <div className="tag">
-                                <TimelapseIcon/>
+                                {/* <TimelapseIcon/> */}
                                 <div className="nfo">
                                     <div>Phone</div>
                                     <div>{site.vars.phone}</div>
                                 </div>
                             </div>
                             <div className="tag">
-                                <PhoneIcon/>
+                                {/* <PhoneIcon/> */}
                                 <div className="nfo">
                                     <div>Working hours</div>
                                     <div>{site.vars.hours}</div>
                                 </div>
                             </div>
                             <div className="tag">
-                                <EmailIcon/>
+                                {/* <EmailIcon/> */}
                                 <div className="nfo">
                                     <div>Email</div>
                                     <div>{site.vars.email}</div>

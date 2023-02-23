@@ -6,7 +6,7 @@ import CartDetail from './cartDetail';
 import { useDispatch,useSelector} from 'react-redux';
 import { removeFromCart, userPurchaseSuccess } from 'store/actions/user.actions';
 
-import { PayPalButton } from 'react-paypal-button-v2';
+// import { PayPalButton } from 'react-paypal-button-v2';
 
 
 const UserCart = (props) => {
@@ -87,30 +87,30 @@ const UserCart = (props) => {
                     </div>
                     { loading ? 
                         <Loader/>
-                    :
-                    <div className="pp_button">
-                        <PayPalButton
-                            options={{
-                                clientId:"AfSlRXnafQdgHPM6Yyn_t5HPAJz32TAP_QxoN_oFMcsLsQ3ABeqQlPNmgx5E5uW-qCtdh4Cz3NwlZy3R",
-                                currency:"USD",
-                                disableFunding:'credit,card'
-                            }}
-                            createOrder={(data,actions)=>{
-                                return actions.order.create({
-                                   purchase_units: generateUnits()
-                                })
-                            }}
-                            onSuccess={(details,data)=>{
-                                // console.log(details)
-                                // console.log(data)
-                                dispatch(userPurchaseSuccess(details.id))
-                                setLoading(true);
-                            }}
-                            onCancel={(data)=>{
-                                setLoading(false);
-                            }}
-                        />
-                    </div>
+                    :null
+                    // <div className="pp_button">
+                    //     <PayPalButton
+                    //         options={{
+                    //             clientId:"AfSlRXnafQdgHPM6Yyn_t5HPAJz32TAP_QxoN_oFMcsLsQ3ABeqQlPNmgx5E5uW-qCtdh4Cz3NwlZy3R",
+                    //             currency:"USD",
+                    //             disableFunding:'credit,card'
+                    //         }}
+                    //         createOrder={(data,actions)=>{
+                    //             return actions.order.create({
+                    //                purchase_units: generateUnits()
+                    //             })
+                    //         }}
+                    //         onSuccess={(details,data)=>{
+                    //             // console.log(details)
+                    //             // console.log(data)
+                    //             dispatch(userPurchaseSuccess(details.id))
+                    //             setLoading(true);
+                    //         }}
+                    //         onCancel={(data)=>{
+                    //             setLoading(false);
+                    //         }}
+                    //     />
+                    // </div>
                     }
                     
                 </>
