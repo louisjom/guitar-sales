@@ -5,7 +5,8 @@ import { errorHelper } from 'utils/tools';
 
 // import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 // import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import Icon from '@mui/material/Icon';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {
     List,
     ListItem,
@@ -43,7 +44,7 @@ const RangeSelect = (props) => {
                         className="collapse_title"
                     />
                     {/* { open ? <ArrowDropUpIcon/> :<ArrowDropDownIcon/> }  */}
-                    { open ? <Icon>arrow_drop_up_icon</Icon> :<Icon>arrow_drop_down_icon</Icon>} 
+                    { open ?  <ArrowDropUpIcon/> :<ArrowDropDownIcon/>} 
                 </ListItem>
                 <Collapse in={open} timeout="auto">
                     <List component="div" disablePadding>

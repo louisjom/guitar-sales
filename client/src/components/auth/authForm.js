@@ -47,7 +47,7 @@ const AuthForm = (props) => {
 
     useEffect(()=>{
         if(notifications && notifications.success){
-            // props.history.push('/dashboard')
+            
             navigate("/dashboard")
         } else{
             setLoading(false);

@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 
 // import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 // import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import Icon from '@mui/material/Icon';
+// import Icon from '@mui/material/Icon
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 // import {
 //     List,
 //     ListItem,
@@ -66,7 +68,7 @@ const CollapseCheckbox = (props) => {
                         primary={props.title}
                         className="collapse_title"
                     />
-                    { open ? <Icon>arrow_drop_up_icon</Icon> :<Icon>arrow_drop_down_icon</Icon>} 
+                    { open ? <ArrowDropUpIcon/> :<ArrowDropDownIcon/>} 
                 </ListItem>
                 <Collapse in={open} timeout="auto">
                     <List component="div" disablePadding>

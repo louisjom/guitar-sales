@@ -5,6 +5,10 @@ import SearchBar from './searchBar';
 import CollapseCheckbox from './collapseCheckbox';
 import RangeSelect from './rangeSelect';
 
+// import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import GridOnIcon from '@mui/icons-material/GridOn';
+import GridOffIcon from '@mui/icons-material/GridOff';
+
 
 import { useDispatch, useSelector } from 'react-redux'
 import { productsByPaginate } from 'store/actions/product.actions';
@@ -105,12 +109,13 @@ const Shop = () => {
                                 <div className={`grid_btn ${grid ? '': 'active'}`}
                                     onClick={()=> handleGrid()}
                                 >
-                                    <Icon>grid_on_icon</Icon> 
+                                    <GridOnIcon/>
+                                    
                                 </div>
                                 <div className={`grid_btn ${!grid ? '': 'active'}`}
                                     onClick={()=> handleGrid()}
                                 >
-                                    <Icon>grid_off_icon</Icon> 
+                                    <GridOffIcon/>
                                 </div>
                             </div>
                             <div>
