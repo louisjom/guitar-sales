@@ -30,8 +30,10 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
+import { useParams } from 'react-router-dom';
 
 const AddProduct = (props) => {
+    const { id } = useParams();
     const [values,setValues] = useState(formValues);
     const [loading, setLoading] = useState(false);
     const products = useSelector(state=>state.products);
@@ -50,7 +52,7 @@ const AddProduct = (props) => {
 
     const handleSubmit = (values) => {
         setLoading(true);
-        dispatch(productEdit(values, props.match.params.id))
+        dispatch(productEdit(values, id))
     }
 
 
@@ -75,12 +77,12 @@ const AddProduct = (props) => {
 
 
     useEffect(()=>{
-        const param = props.match.params.id;
+        // const param = props.match.params.id;
         dispatch(getAllBrands());
-        if(param){
-            dispatch(productsById(param))
+        if(id){
+            dispatch(productsById(id))
         }
-    },[dispatch, props.match.params.id]);
+    },[dispatch, id]);
 
     useEffect(()=>{
         if(products && products.byId){

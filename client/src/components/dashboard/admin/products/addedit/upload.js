@@ -42,13 +42,16 @@ const PicUpload = ({picValue}) => {
             :
             <Form onSubmit={formikImg.handleSubmit}>
                 <Form.Group>
-                    <Form.File
+                    {/* <Form.File
                         id="file"
                         name="file"
                         onChange={(event)=>{
                             formikImg.setFieldValue("pic", event.target.files[0])
                         }}
-                    />
+                    /> */}
+                    <input id="file" name="file" type="file" onChange={(event) => {
+                        formikImg.setFieldValue("pic", event.currentTarget.files[0]);
+                    }}  />
                     { formikImg.errors.pic && formikImg.touched.pic ?
                         <div>Error</div>
                         :null

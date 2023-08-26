@@ -7,6 +7,7 @@ import { errorHelper } from 'utils/tools';
 // import { TextField } from '@material-ui/core';
 import TextField from '@mui/material/TextField';
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux'
 import { productsByPaginate, productRemove } from 'store/actions/product.actions';
@@ -15,6 +16,7 @@ import { productsByPaginate, productRemove } from 'store/actions/product.actions
 const defaultValues = { keywords:'',brand:[], min:0,max:5000,frets:[], page:1 }
 
 const AdminProducts = (props) => {
+    const navigate = useNavigate();
     const [removeModal, setRemoveModal] = useState(false);
     const [toRemove, setToRemove] = useState(null)
 
@@ -41,7 +43,7 @@ const AdminProducts = (props) => {
     });
 
     const gotoEdit = (id) => {
-        props.history.push(`/dashboard/admin/edit_product/${id}`)
+        navigate(`/dashboard/admin/edit_product/${id}`)
     } 
 
     const gotoPage = (page) => {

@@ -7,6 +7,7 @@ import { useFormik } from 'formik';
 import { errorHelper } from 'utils/tools';
 import Loader from 'utils/loader'
 import { validation } from './formValues'; 
+import { useNavigate } from 'react-router-dom';
 
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -33,6 +34,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 
 
 const AddProduct = (props) => {
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const notifications =  useSelector(state=>state.notifications);
     const brands = useSelector(state=>state.brands);
@@ -77,7 +79,8 @@ const AddProduct = (props) => {
 
     useEffect(()=>{
         if(notifications && notifications.success){
-            props.history.push('/dashboard/admin/admin_products');
+            navigate('/dashboard/admin/admin_products');
+            // props.history.push('/dashboard/admin/admin_products');
         } 
         if(notifications && notifications.error){
             setLoading(false)

@@ -10,12 +10,14 @@ import Loder from 'utils/loader';
 
 import { Modal } from 'react-bootstrap';
 import Slider from 'react-slick';
+import { useParams } from 'react-router-dom';
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 
 const ProductDetail = (props) => {
+    const { id } = useParams();
     const [modal, setModal ] = useState(false);
     const products = useSelector(state=> state.products);
     const dispatch = useDispatch();
@@ -33,11 +35,11 @@ const ProductDetail = (props) => {
             setModal(true);
         }
     }
-
+    console.log(id, "the props")
 
     useEffect(()=>{
-        dispatch(productsById(props.match.params.id))
-    },[dispatch, props.match.params.id]);
+        dispatch(productsById(id))
+    },[dispatch, id]);
 
 
     useEffect(()=>{
